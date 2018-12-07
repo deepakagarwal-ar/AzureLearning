@@ -1,4 +1,4 @@
-﻿# Create a new resource group.
+# Create a new resource group.
 
 # login to the AzureRMAccount
 login-azureRmaccount
@@ -21,12 +21,12 @@ $skuName = "Standard_LRS"
 $storageAccountName = $args[0] 
 
 try{
-    New-AzureStorageAccount -StorageAccountName $Name -Location $Location.Location 
+    New-AzureStorageAccount -StorageAccountName $Name -Location $Location.Location `
     -SkuName $skuName
      Write-Host "Creating Storage Account $storageAccountName"
 }
 catch {
- Write-Host "Provide different storage name = $storageAccountName"
+    Write-Host "Provide different storage name = $storageAccountName"
 }
    
 
